@@ -40,7 +40,7 @@ const TransferResult = {
       type: String
     },
     amount: {
-      type: Number
+      type: String
     }
   },
   ilpPacket: {
