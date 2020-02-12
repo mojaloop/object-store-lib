@@ -28,7 +28,7 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-    "@mojaloop/central-services-logger": "8.6.0",
+    "@mojaloop/central-services-logger": "9.1.0",
     "mongoose": "5.8.11"
   },
   "devDependencies": {
