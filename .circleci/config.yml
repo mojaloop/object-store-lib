@@ -112,9 +112,6 @@ jobs:
       - run:
           name: Execute unit tests
           command: npm -s run test:unit
-      - store_artifacts:
-          path: ./
-          prefix: junit
       - store_test_results:
           path: ./junit.xml
 
@@ -130,9 +127,6 @@ jobs:
           command: *defaults_awsCliDependencies
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
-      - run:
-          name: Install tape, tapes and tap-xunit
-          command: npm install tape tapes tap-xunit tap-spec nyc
       - run:
           name: Execute code coverage check
           command: npm -s run test:coverage
