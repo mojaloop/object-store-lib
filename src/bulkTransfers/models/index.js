@@ -30,11 +30,8 @@
 'use strict'
 
 module.exports = {
-  // getBulkTransferModel: require('./bulkTransfer').getBulkTransferModel, // not used [08.11.2019]
-  // getBulkTransferFulfilModel: require('./bulkTransferFulfil').getBulkTransferFulfilModel, // not used [08.11.2019]
-  getBulkTransferResultModel: require('./bulkTransferResult').getBulkTransferResultModel, // in use
-  getIndividualTransferModel: require('./individualTransfer').getIndividualTransferModel, // in use
-  getIndividualTransferFulfilModel: require('./individualTransferFulfil').getIndividualTransferFulfilModel, // in use
-  // getIndividualTransferResultModel: require('./individualTransferResult').getIndividualTransferResultModel, // not used [08.11.2019]
-  getBulkTransferResultByMessageIdDestination: require('./facade').getBulkTransferResultByMessageIdDestination // in use
+  getBulkTransferResultModel: require('./bulkTransferResult').getBulkTransferResultModel,
+  getIndividualTransferModel: require('./individualTransfer').getIndividualTransferModel,
+  getIndividualTransferFulfilModel: require('./individualTransferFulfil').getIndividualTransferFulfilModel,
+  getBulkTransferResultByMessageIdDestination: require('./facade').getBulkTransferResultByMessageIdDestination
 }

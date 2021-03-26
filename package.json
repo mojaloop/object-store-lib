@@ -19,8 +19,7 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged && npm test",
-      "post-commit": "git update-index --again",
-      "pre-push": "npm test && npm run updates:check && npm run audit:check"
+      "post-commit": "git update-index --again"
     }
   },
   "license": "Apache-2.0",
