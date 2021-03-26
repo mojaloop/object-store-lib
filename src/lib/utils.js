@@ -1,16 +1,14 @@
 
-
-
 /**
  * @function resolveOptionsWithDefaults
- * @description Given a set of options and default options, combine into 
+ * @description Given a set of options and default options, combine into
  *   one set of options, overriding the defaultOptions if necessary.
- *   
+ *
  *    Note: This only combines 1 level deep - nested defaults will be overriden by the input options
- * @param {*} inputOptions 
- * @param {*} defaultOptions 
+ * @param {*} inputOptions
+ * @param {*} defaultOptions
  */
-function resolveOptionsWithDefaults(inputOptions, defaultOptions) {
+function resolveOptionsWithDefaults (inputOptions, defaultOptions) {
   if (typeof defaultOptions !== 'object' || defaultOptions === null) {
     throw new Error('defaultOptions must be an object')
   }
@@ -24,7 +22,6 @@ function resolveOptionsWithDefaults(inputOptions, defaultOptions) {
     ...inputOptions
   }
 }
-
 
 module.exports = {
   resolveOptionsWithDefaults

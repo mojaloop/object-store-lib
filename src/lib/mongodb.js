@@ -46,14 +46,12 @@ Mongoose.set('useCreateIndex', true)
 exports.Mongoose = Mongoose
 exports.db = Mongoose.connection
 
-
-
 /**
  * @function connect
  * @description connects to the MongoDb Server
  * @param {String} uri - The uri string to connect to
- * @param {ConnectionOptions} options - Connection options to pass to Mongoose. 
- *   Defaults to: 
+ * @param {ConnectionOptions} options - Connection options to pass to Mongoose.
+ *   Defaults to:
  *   {
  *     promiseLibrary: global.Promise,
  *     useUnifiedTopology: true,
@@ -65,7 +63,7 @@ exports.db = Mongoose.connection
 exports.connect = (uri, options = {}) => {
   const defaultOptions = {
     promiseLibrary: global.Promise,
-    useUnifiedTopology: true,
+    useUnifiedTopology: true
   }
 
   return Mongoose.connect(uri, resolveOptionsWithDefaults(options, defaultOptions))
