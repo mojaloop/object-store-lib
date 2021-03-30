@@ -66,5 +66,8 @@ exports.connect = (uri, options = {}) => {
     useUnifiedTopology: true
   }
 
-  return Mongoose.connect(uri, resolveOptionsWithDefaults(options, defaultOptions))
+  const resolvedOptions = resolveOptionsWithDefaults(options, defaultOptions) 
+  Logger.verbose(`connecting to mongodb with uri: ${uri} and options: ${JSON.stringify(resolvedOptions)}`)
+
+  return Mongoose.connect(uri, resolvedOptions)
 }
