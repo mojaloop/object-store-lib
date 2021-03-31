@@ -11,11 +11,10 @@ module.exports = {
     global: {
       // Still in snapshot status!
       // this needs improving
-      // everything is tightyly coupled to Mongoose...
-      statements: 57,
+      statements: 56,
       functions: 6,
       branches: 25,
-      lines: 57
+      lines: 56
     }
   },
   reporters: ['jest-junit', 'default']
