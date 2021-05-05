@@ -56,3 +56,7 @@ jspm_packages
 
 #package-lock.json
 .history
+
+
+# testing
+junit.xml

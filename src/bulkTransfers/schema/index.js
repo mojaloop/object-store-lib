@@ -31,12 +31,9 @@
 'use strict'
 
 module.exports = {
-  // getBulkTransferSchema: require('./bulkTransfer').getBulkTransferSchema, // not used [10.10.2019]
-  // getBulkTransferFulfilSchema: require('./bulkTransferFulfil').getBulkTransferFulfilSchema, // not used [10.10.2019]
-  getBulkTransferResultSchema: require('./bulkTransferResult').getBulkTransferResultSchema, // in use
-  getIndividualTransferSchema: require('./individualTransfer').getIndividualTransferSchema, // in use
-  getIndividualTransferFulfilSchema: require('./individualTransferFulfil').getIndividualTransferFulfilSchema, // in use
-  // getIndividualTransferResultSchema: require('./individualTransferResult').getIndividualTransferResultSchema, // not used [10.10.2019]
+  getBulkTransferResultSchema: require('./bulkTransferResult').getBulkTransferResultSchema,
+  getIndividualTransferSchema: require('./individualTransfer').getIndividualTransferSchema,
+  getIndividualTransferFulfilSchema: require('./individualTransferFulfil').getIndividualTransferFulfilSchema,
   definitions: {
     Transfer: require('./individualTransfer').Transfer,
     TransferFulfil: require('./individualTransferFulfil').TransferFulfil,
