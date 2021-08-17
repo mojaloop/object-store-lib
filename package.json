@@ -1,5 +1,5 @@
 {
-  "name": "@mojaloop/central-object-store",
+  "name": "@mojaloop/object-store-lib",
   "version": "11.1.0-snapshot",
   "description": "Mojaloop library for common object store",
   "main": "src/index.js",
@@ -24,7 +24,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:mojaloop/central-object-store.git"
+    "url": "git@github.com:mojaloop/object-store-lib.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
