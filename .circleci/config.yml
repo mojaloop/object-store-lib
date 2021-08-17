@@ -229,41 +229,25 @@ jobs:
       - run:
           <<: *defaults_npm_publish_release
 
+##
+# Workflows
+#
+# CircleCI Workflow config
+##
 workflows:
   version: 2
   build_and_test:
     jobs:
+      - pr-tools/pr-title-check:
+          context: org-global
+
       - setup:
           context: org-global
           filters:
             tags:
               only: /.*/
-            branches:
-              ignore:
-                - /feature*/
-                - /bugfix*/
-      # - test-unit:
-      #     context: org-global
-      #     requires:
-      #       - setup
-      #     filters:
-      #       tags:
-      #         only: /.*/
-      #       branches:
-      #         ignore:
-      #           - /feature*/
-      #           - /bugfix*/
-      # - test-coverage:
-      #     context: org-global
-      #     requires:
-      #       - setup
-      #     filters:
-      #       tags:
-      #         only: /.*/
-      #       branches:
-      #         ignore:
-      #           - /feature*/
-      #           - /bugfix*/
+
+     
       - vulnerability-check:
           context: org-global
           requires:
@@ -271,10 +255,7 @@ workflows:
           filters:
             tags:
               only: /.*/
-            branches:
-              ignore:
-                - /feature*/
-                - /bugfix*/
+
       - audit-licenses:
           context: org-global
           requires:
@@ -282,41 +263,35 @@ workflows:
           filters:
             tags:
               only: /.*/
-            branches:
-              ignore:
-                - /feature*/
-                - /bugfix*/
-      - build-snapshot:
+
+      # New commits to master release automatically
+      - release:
           context: org-global
           requires:
-            - setup
-            # - test-unit
-            # - test-coverage
-            # - test-integration
-            # - test-functional
-            # - test-spec
+            - audit-licenses
+            - vulnerability-check
+          filters:
+            branches:
+              only:
+                - master
+
+      - github-release:
+          context: org-global
+          requires:
+            - release
+          filters:
+            branches:
+              only:
+                - master
+
+      - publish:
+          context: org-global
+          requires:
             - vulnerability-check
             - audit-licenses
           filters:
             tags:
-              only: /v[0-9]+(\.[0-9]+)*\-snapshot/
-            branches:
-              ignore:
-                - /.*/
-      - build:
-          context: org-global
-          requires:
-            - setup
-            # - test-unit
-            # - test-coverage
-            # - test-integration
-            # - test-functional
-            # - test-spec
-            - vulnerability-check
-            - audit-licenses
-          filters:
-            tags:
-              only: /v[0-9]+(\.[0-9]+)*/
+              only: /.*/
             branches:
               ignore:
                 - /.*/
