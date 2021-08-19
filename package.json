@@ -13,7 +13,8 @@
     "audit:resolve": "SHELL=sh resolve-audit --production",
     "audit:check": "SHELL=sh check-audit --production",
     "dep:check": "npx ncu -e 2",
-    "dep:update": "npx ncu -u"
+    "dep:update": "npx ncu -u",
+    "release": "standard-version --releaseCommitMessageFormat 'chore(release): {{currentTag}} [skip ci]'"
   },
   "license": "Apache-2.0",
   "author": "ModusBox",
@@ -38,6 +39,7 @@
     "nyc": "15.1.0",
     "npm-audit-resolver": "2.3.0",
     "npm-check-updates": "11.5.11",
-    "standard": "16.0.3"
+    "standard": "16.0.3",
+    "standard-version": "^9.3.1"
   }
 }
