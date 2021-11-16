@@ -15,6 +15,7 @@
     "lint": "standard",
     "lint:fix": "standard --fix",
     "release": "standard-version --releaseCommitMessageFormat 'chore(release): {{currentTag}} [skip ci]'",
+    "test:junit": "jest --reporters=jest-junit",
     "test:unit": "jest"
   },
   "license": "Apache-2.0",

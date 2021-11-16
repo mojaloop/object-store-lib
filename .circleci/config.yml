@@ -106,6 +106,24 @@ jobs:
           paths:
             - node_modules
 
+  test-unit:
+    executor: default-docker
+    steps:
+      - run:
+          name: Install general dependencies
+          command: *defaults_Dependencies
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+      - run:
+          name: Execute unit tests
+          command: npm -s run test:junit
+      - store_artifacts:
+          path: ./
+          prefix: junit
+      - store_test_results:
+          path: ./
+
   vulnerability-check:
     executor: default-docker
     steps:
@@ -247,6 +265,12 @@ workflows:
             tags:
               only: /.*/
 
+      - test-unit:
+          context: org-global
+          filters:
+            tags:
+              only: /.*/
+
      
       - vulnerability-check:
           context: org-global
@@ -268,6 +292,7 @@ workflows:
       - release:
           context: org-global
           requires:
+            - test-unit
             - audit-licenses
             - vulnerability-check
           filters:
