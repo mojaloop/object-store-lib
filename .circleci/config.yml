@@ -119,10 +119,9 @@ jobs:
           name: Execute unit tests
           command: npm -s run test:junit
       - store_artifacts:
-          path: ./
-          prefix: junit
+          path: ./junit.xml
       - store_test_results:
-          path: ./
+          path: ./junit.xml
 
   vulnerability-check:
     executor: default-docker
