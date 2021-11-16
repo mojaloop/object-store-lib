@@ -36,10 +36,6 @@ Mongoose.connection.once('open', function callback () {
   Logger.info('MongoDB succesfully connected')
 })
 
-Mongoose.set('useFindAndModify', false)
-Mongoose.set('useNewUrlParser', true)
-Mongoose.set('useCreateIndex', true)
-
 exports.Mongoose = Mongoose
 exports.db = Mongoose.connection
 
