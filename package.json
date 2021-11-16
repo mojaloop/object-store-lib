@@ -8,20 +8,23 @@
     "dep:check"
   ],
   "scripts": {
-    "lint": "standard",
-    "lint:fix": "standard --fix",
-    "audit:resolve": "SHELL=sh resolve-audit --production",
     "audit:check": "SHELL=sh check-audit --production",
+    "audit:resolve": "SHELL=sh resolve-audit --production",
     "dep:check": "npx ncu -e 2",
     "dep:update": "npx ncu -u",
-    "release": "standard-version --releaseCommitMessageFormat 'chore(release): {{currentTag}} [skip ci]'"
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "release": "standard-version --releaseCommitMessageFormat 'chore(release): {{currentTag}} [skip ci]'",
+    "test:junit": "jest --reporters=jest-junit",
+    "test:unit": "jest"
   },
   "license": "Apache-2.0",
   "author": "ModusBox",
   "contributors": [
     "Georgi Georgiev <georgi.georgiev@modusbox.com>",
     "Miguel de Barros <miguel.debarros@modusbox.com>",
-    "Valentin Genev <valenting.genev@modusbox.com>"
+    "Valentin Genev <valenting.genev@modusbox.com>",
+    "Lewis Daly <lewisd@crosslaketech.com>"
   ],
   "repository": {
     "type": "git",
@@ -36,9 +39,11 @@
   },
   "devDependencies": {
     "eslint": "7.26.0",
-    "nyc": "15.1.0",
+    "jest": "^27.3.1",
+    "jest-junit": "^13.0.0",
     "npm-audit-resolver": "2.3.0",
     "npm-check-updates": "11.5.11",
+    "nyc": "15.1.0",
     "standard": "16.0.3",
     "standard-version": "^9.3.1"
   }
