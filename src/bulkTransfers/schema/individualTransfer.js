@@ -75,7 +75,7 @@ const getIndividualTransferSchema = () => {
       }))
   }
   IndividualTransferSchema.pre('save', function () {
-    if (!this.payload.extensionList.extension.length) {
+    if (!this.payload.extensionList || !this.payload.extensionList.extension || !this.payload.extensionList.extension.length) {
       delete this._doc.payload.extensionList
     }
   })
