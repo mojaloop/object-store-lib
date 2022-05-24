@@ -33,7 +33,7 @@ const Logger = require('@mojaloop/central-services-logger')
 
 Mongoose.connection.on('error', (err) => { Logger.info('MongoDB connection error ', err) })
 Mongoose.connection.once('open', function callback () {
-  Logger.info('MongoDB succesfully connected')
+  Logger.isInfoEnabled && Logger.info('MongoDB successfully connected')
 })
 
 exports.Mongoose = Mongoose
