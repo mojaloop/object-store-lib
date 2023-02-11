@@ -49,7 +49,7 @@
     "jest": "^28.1.0",
     "jest-junit": "^13.2.0",
     "npm-audit-resolver": "3.0.0-7",
-    "npm-check-updates": "13.0.3",
+    "npm-check-updates": "16.7.4",
     "nyc": "15.1.0",
     "replace": "^1.2.1",
     "standard": "17.0.0",
