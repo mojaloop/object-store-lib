@@ -39,9 +39,11 @@ Mongoose.connection.once('open', function callback () {
 exports.Mongoose = Mongoose
 exports.db = Mongoose.connection
 
-exports.connect = (uri) => {
+// https://mongoosejs.com/docs/api/mongoose.html#mongoose_Mongoose-connect
+exports.connect = (uri, options) => {
   return Mongoose.connect(uri, {
     promiseLibrary: global.Promise,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    ...options
   })
 }
