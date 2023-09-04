@@ -221,10 +221,6 @@ jobs:
       - restore_cache:
           key: dependency-cache-{{ .Environment.CIRCLE_SHA1 }}
       - run:
-          # This is needed for legacy core tests. Remove this once 'tape' is fully deprecated.
-          name: Install tape, tapes and tap-xunit
-          command: npm install tape tapes tap-xunit
-      - run:
           name: Create dir for test results
           command: mkdir -p ./test/results
       - run:
@@ -262,16 +258,6 @@ jobs:
           destination: test
       - store_test_results:
           path: coverage
-      - run:
-          name: Copy code coverage to SonarQube
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ];
-            then
-                echo "Sending lcov.info to SonarQube..."
-                aws s3 cp coverage/lcov.info $AWS_S3_DIR_SONARQUBE/${CIRCLE_PROJECT_REPONAME}/lcov.info
-            else
-                echo "Not a release (env CIRCLE_BRANCH != 'master'), skipping sending lcov.info to SonarQube."
-            fi
 
   vulnerability-check:
     executor: default-docker
@@ -293,7 +279,7 @@ jobs:
           command: mkdir -p ./audit/results
       - run:
           name: Check for new npm vulnerabilities
-          command: npm run audit:check --silent -- --json > ./audit/results/auditResults.json
+          command: npm run audit:check -- -o json > ./audit/results/auditResults.json
       - store_artifacts:
           path: ./audit/results
           destination: audit
