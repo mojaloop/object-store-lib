@@ -1,6 +1,6 @@
 # object-store-lib
 
-[![Git Commit](https://img.shields.io/github/last-commit/mojaloop/object-store-lib.svg?style=flat)](https://github.com/mojaloop/object-store-lib/commits/master)
+[![Git Commit](https://img.shields.io/github/last-commit/mojaloop/object-store-lib.svg?style=flat)](https://github.com/mojaloop/object-store-lib/commits/main)
 [![Git Releases](https://img.shields.io/github/release/mojaloop/object-store-lib.svg?style=flat)](https://github.com/mojaloop/object-store-lib/releases)
 [![Npm Version](https://img.shields.io/npm/v/@mojaloop/object-store-lib.svg?style=flat)](https://www.npmjs.com/package/@mojaloop/object-store-lib)
 [![NPM Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/@mojaloop/object-store-lib.svg?style=flat)](https://www.npmjs.com/package/@mojaloop/object-store-lib)
