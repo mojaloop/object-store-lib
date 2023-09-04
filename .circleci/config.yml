@@ -49,7 +49,7 @@ defaults_npm_publish_release: &defaults_npm_publish_release
 defaults_export_version_from_package: &defaults_export_version_from_package
   name: Format the changelog into the github release body and get release tag
   command: |
-    git diff --no-indent-heuristic master~1 HEAD CHANGELOG.md | sed -n '/^+[^+]/ s/^+//p' > /tmp/changes
+    git diff --no-indent-heuristic main~1 HEAD CHANGELOG.md | sed -n '/^+[^+]/ s/^+//p' > /tmp/changes
     echo 'export RELEASE_CHANGES=`cat /tmp/changes`' >> $BASH_ENV
     echo 'export RELEASE_TAG=`cat package-lock.json | jq -r .version`' >> $BASH_ENV
 
@@ -120,8 +120,8 @@ defaults_display_versions: &defaults_display_versions
     echo "nvm: $(nvm --version)"
 
 defaults_environment: &defaults_environment
-  ## env var for nx to set master branch
-  MAIN_BRANCH_NAME: master
+  ## env var for nx to set main branch
+  MAIN_BRANCH_NAME: main
 
 
 ##
@@ -546,7 +546,7 @@ workflows:
               ignore:
                 - /feature*/
                 - /bugfix*/
-      # New commits to master release automatically
+      # New commits to main release automatically
       - release:
           context: org-global
           requires:
@@ -560,7 +560,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
                 - /release\/v.*/
       - github-release:
           context: org-global
@@ -569,7 +569,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
                 - /release\/v.*/
       - publish:
           context: org-global
