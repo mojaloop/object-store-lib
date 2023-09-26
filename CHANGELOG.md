@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [12.0.2](https://github.com/mojaloop/object-store-lib/compare/v12.0.1...v12.0.2) (2023-09-26)
+
+
+### Bug Fixes
+
+* **mojaloop/#3527:** remove 'promiseLibrary ' option ([#47](https://github.com/mojaloop/object-store-lib/issues/47)) ([c5c9311](https://github.com/mojaloop/object-store-lib/commit/c5c9311bf124fe6ed676bd0585b1a5aee0b666ed)), closes [mojaloop/#3527](https://github.com/mojaloop/project/issues/3527)
+
 ### [12.0.1](https://github.com/mojaloop/object-store-lib/compare/v12.0.0...v12.0.1) (2023-09-04)
 
 ## [12.0.0](https://github.com/mojaloop/object-store-lib/compare/v11.1.2...v12.0.0) (2022-05-24)
