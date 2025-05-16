@@ -2,6 +2,7 @@ disabled: true
 
 ignore:
 
+
 # Set output format defaults
 output:
   - "table"
