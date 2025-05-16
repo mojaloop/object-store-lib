@@ -20,7 +20,10 @@
   "main": "src/index.js",
   "pre-commit": [
     "lint",
-    "dep:check"
+    "dep:check",
+    "test:unit",
+    "test:coverage-check",
+    "audit:check"
   ],
   "scripts": {
     "lint": "standard",
