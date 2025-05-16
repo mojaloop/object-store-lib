@@ -53,11 +53,13 @@
     "jest-junit": "^16.0.0",
     "npm-check-updates": "18.0.1",
     "nyc": "17.1.0",
+    "pre-commit": "1.2.2",
     "replace": "^1.2.2",
     "standard": "17.1.2",
     "standard-version": "^9.5.0"
   },
   "overrides": {
+    "cross-spawn": "7.0.6",
     "glob": "10.4.5",
     "rimraf": "5.0.10"
   },
