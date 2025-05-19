@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.1.0](https://github.com/mojaloop/object-store-lib/compare/v12.0.7...v12.1.0) (2025-05-19)
+
+
+### Features
+
+* node version upgrade to v22.15.0 ([#57](https://github.com/mojaloop/object-store-lib/issues/57)) ([a73e660](https://github.com/mojaloop/object-store-lib/commit/a73e660cc9480bc3a10ced4840b9536bc2e5989b))
+
 ### [12.0.7](https://github.com/mojaloop/object-store-lib/compare/v12.0.6...v12.0.7) (2025-03-11)
 
 ### [12.0.6](https://github.com/mojaloop/object-store-lib/compare/v12.0.5...v12.0.6) (2025-02-21)

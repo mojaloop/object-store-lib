@@ -1,6 +1,6 @@
 {
   "name": "@mojaloop/object-store-lib",
-  "version": "12.0.7",
+  "version": "12.1.0",
   "description": "Mojaloop library for common object store",
   "license": "Apache-2.0",
   "author": "ModusBox",
