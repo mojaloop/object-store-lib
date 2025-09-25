@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.2.0](https://github.com/mojaloop/object-store-lib/compare/v12.1.0...v12.2.0) (2025-09-25)
+
+
+### Features
+
+* add gyrpe src scan, update deps ([#58](https://github.com/mojaloop/object-store-lib/issues/58)) ([5134d5b](https://github.com/mojaloop/object-store-lib/commit/5134d5b74c82f784287a50e1b956146b14f6f859))
+
 ## [12.1.0](https://github.com/mojaloop/object-store-lib/compare/v12.0.7...v12.1.0) (2025-05-19)
 
 
