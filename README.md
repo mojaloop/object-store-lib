@@ -28,7 +28,7 @@ You can then check to see if the CI will pass based on the current dependencies 
 npm run audit:check
 ```
 
-The [audit-ci.jsonc](./audit-ci.jsonc) contains any audit-exceptions that cannot be fixed to ensure that CircleCI will build correctly.
+The [audit-ci.jsonc](./audit-ci.jsonc) contains any audit-exceptions that cannot be fixed to ensure that CircleCI will build correctly. Please use in conjunction with .grype.yaml to ignore vulnerability when the patched depdendency breaks functionality.
 
 ## Automated Releases
 
