@@ -42,7 +42,6 @@ exports.db = Mongoose.connection
 // https://mongoosejs.com/docs/api/mongoose.html#mongoose_Mongoose-connect
 exports.connect = (uri, options) => {
   return Mongoose.connect(uri, {
-    useUnifiedTopology: true,
     ...options
   })
 }
