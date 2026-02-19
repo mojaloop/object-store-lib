@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [12.2.3](https://github.com/mojaloop/object-store-lib/compare/v12.2.2...v12.2.3) (2026-02-19)
+
+
+### Bug Fixes
+
+* remove mongodb deprecated option ([#64](https://github.com/mojaloop/object-store-lib/issues/64)) ([81ba297](https://github.com/mojaloop/object-store-lib/commit/81ba297c55cd39988193030187e525d3b37ba9b9))
+* update dependencies ([#66](https://github.com/mojaloop/object-store-lib/issues/66)) ([7525b95](https://github.com/mojaloop/object-store-lib/commit/7525b959e63ed7e66fc95a4171d35e192c1ba329))
+* update orb version ([#65](https://github.com/mojaloop/object-store-lib/issues/65)) ([66cfe80](https://github.com/mojaloop/object-store-lib/commit/66cfe80652c9bd05301d2904ef634187a733b575))
+
 ### [12.2.2](https://github.com/mojaloop/object-store-lib/compare/v12.2.1...v12.2.2) (2025-12-09)
 
 ### [12.2.1](https://github.com/mojaloop/object-store-lib/compare/v12.2.0...v12.2.1) (2025-12-05)
