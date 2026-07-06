@@ -5,6 +5,17 @@
   "moderate": true,
     // Only check production dependencies (devDependencies ignored)
   "skip-dev": true,
-  "allowlist": [
+  "allowlist": [ // NOTE: Please add as much information as possible to any items added to the allowlist
+    // ---------------------------------------------------------------------------------------------
+    // GHSA-w5hq-g745-h8pq (moderate) - uuid: Missing buffer bounds check in v3/v5/v6 when buf provided.
+    // Dev-only, transitive: nyc@17.1.0 -> istanbul-lib-processinfo -> uuid. Not present in the
+    // production dependency tree (only prod dep is mongoose). The only published fix bumps nyc to
+    // 18.0.0 (semver-major), which pulls glob@^13 and conflicts with this repo's pinned global
+    // `glob: 11.1.0` override, breaking `test:coverage-check`. Held on nyc 17.x (see .ncurc.yml).
+    // Not exploitable in CI/coverage usage (no untrusted buffers passed to uuid). skip-dev already
+    // excludes it from the gate; listed here to document the deliberate decision.
+    // TODO(mojaloop/#4479): revisit when the global glob override can be scoped so nyc can move to 18.
+    // Added 2026-07-02.
+    "GHSA-w5hq-g745-h8pq"
   ]
 }
