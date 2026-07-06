@@ -44,7 +44,7 @@
     "snapshot": "npx standard-version --no-verify --skip.changelog --prerelease snapshot --releaseCommitMessageFormat 'chore(snapshot): {{currentTag}}'"
   },
   "dependencies": {
-    "mongoose": "^9.7.3"
+    "mongoose": "^9.7.4"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -55,14 +55,16 @@
     "jest": "30.4.2",
     "jest-junit": "17.0.0",
     "npm-check-updates": "22.2.9",
-    "nyc": "17.1.0",
+    "nyc": "18.0.0",
     "pre-commit": "2.0.0",
     "replace": "1.2.2",
     "standard-version": "9.5.0"
   },
   "overrides": {
     "cross-spawn": "7.0.6",
-    "glob": "11.1.0",
+    "test-exclude@6": {
+      "glob": "11.1.0"
+    },
     "rimraf": "5.0.10",
     "js-yaml": "4.2.0",
     "brace-expansion": "2.0.3",

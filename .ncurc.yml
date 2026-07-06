@@ -1,8 +1,3 @@
 reject: [
   # Add a TODO comment indicating the reason for each rejected dependency upgrade added to this list, and what should be done to resolve it (i.e. handle it through a story, etc).
-  # TODO(mojaloop/#4479): nyc 17->18 bumps its internal glob dependency to ^13. This repo pins a
-  # global `glob: 11.1.0` override, which would force nyc 18 down to glob 11 and break the coverage
-  # tooling (glob/minimatch API mismatch under `test:coverage-check`). Keep nyc on 17.x until the
-  # global glob override can be scoped/removed. Revisit as a dedicated story.
-  "nyc"
 ]
