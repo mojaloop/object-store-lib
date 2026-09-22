@@ -44,17 +44,17 @@
     "snapshot": "npx standard-version --no-verify --skip.changelog --prerelease snapshot --releaseCommitMessageFormat 'chore(snapshot): {{currentTag}}'"
   },
   "dependencies": {
-    "mongoose": "^9.7.4"
+    "mongoose": "^9.10.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "audit-ci": "7.1.0",
-    "eslint": "10.6.0",
-    "eslint-plugin-jest": "^29.15.4",
-    "globals": "^17.7.0",
-    "jest": "30.4.2",
+    "eslint": "10.10.0",
+    "eslint-plugin-jest": "^29.16.6",
+    "globals": "^17.12.0",
+    "jest": "30.5.1",
     "jest-junit": "17.0.0",
-    "npm-check-updates": "22.2.9",
+    "npm-check-updates": "23.1.0",
     "nyc": "18.0.0",
     "pre-commit": "2.0.0",
     "replace": "1.2.2",
@@ -66,13 +66,16 @@
       "glob": "11.1.0"
     },
     "rimraf": "5.0.10",
-    "js-yaml": "4.2.0",
-    "brace-expansion": "2.0.3",
+    "js-yaml": "4.3.2",
+    "brace-expansion": "2.1.4",
     "@isaacs/brace-expansion": "5.0.1",
     "lodash": "4.18.1",
     "replace": {
       "minimatch": "3.1.5"
-    }
+    },
+    "browserslist": "4.28.7",
+    "@humanfs/node": "0.16.8",
+    "baseline-browser-mapping": "2.11.0"
   },
   "peerDependencies": {
     "@mojaloop/central-services-logger": ">=11.x.x"
